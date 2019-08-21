@@ -1,7 +1,6 @@
 document.getElementById("set_url").onclick = function () {
     let play = document.getElementById("play_video"),
-        url = document.getElementById("url").value,
-        icon = document.getElementById('play_icon');
+        url = document.getElementById("url").value;
     if (!url) {
         alert('Please set YouTube URL!');
         return;
