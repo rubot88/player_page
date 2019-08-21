@@ -9,9 +9,15 @@ document.getElementById("link").onclick = function () {
     link.setAttribute("href", url);
     let enteredUrl = link.getAttribute('href'),
         checkedUrl = isValidUrl(enteredUrl);
-    checkedUrl ? icon.classList.add('visible') : alert(`"${enteredUrl}" -  is not a YouTube URL. Please set valid YouTube URL!`)
+    if (checkedUrl) {
+        icon.classList.add('visible')
+    } else {
+        alert(`"${enteredUrl}" - is not a YouTube URL. Please set valid YouTube URL!`);
+        icon.classList.remove('visible');
+    }
 }
 
 function isValidUrl(url) {
     return url.toLowerCase().includes('youtube');
 };
+
