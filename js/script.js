@@ -2,7 +2,7 @@ document.getElementById("set_url").onclick = function () {
     let play = document.getElementById("play_video"),
         url = document.getElementById("url").value;
     if (!url) {
-        alert('Please set YouTube URL!');
+        alert('Please set URL!');
         return;
     }
     play.setAttribute("href", url);
@@ -11,7 +11,7 @@ document.getElementById("set_url").onclick = function () {
     if (checkedUrl) {
         play.classList.add('visible')
     } else {
-        alert(`"${enteredUrl}" - is not a YouTube URL. Please set valid YouTube URL!`);
+        alert(`"${enteredUrl}" - is not valid URL. Please set valid URL!`);
         play.classList.remove('visible');
     }
 }
