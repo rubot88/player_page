@@ -15,24 +15,19 @@
 <body>
 
     <main>
-        <div class="center">
-            <form class="set_url" action="index.html">
-                <fieldset>
-                    <legend>
-                        Put URL here:
-                    </legend>
-                    <input type="text" id="URL" placeholder="url">
-                </fieldset>
-                <input type="submit" value="set url">
-            </form>
+        <div class="center input_wrapp">
+            <div class="input_desc">Put URL here:</div>
+            <input type="text" id="url" placeholder="url">
+            <div class="set_url" onclick="setUrl()" id="link">Set URL</div>
         </div>
         <section class="video-section text-center">
             <div class="center">
                 <div class="container-fluid center">
                     <div class="row video-play">
                         <div class="col">
-                            <a data-fancybox href="https://www.youtube.com/watch?v=xJn3k1f4BiM" class="play-video">
-                                <img src="./img/Play_Video_Icon.png" alt="play icon"></a>
+                            <a data-fancybox href="https://www.youtube.com/watch?v=xJn3k1f4BiM" id="play-video">
+                                <img src="./img/Play_Video_Icon.png" alt="play icon">
+                            </a>
                         </div>
                     </div>
                 </div>
