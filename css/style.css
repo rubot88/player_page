@@ -7,87 +7,7 @@
         font-style: normal;
     }
     
-    [class^="icon-"],
-    [class*=" icon-"] {
-        /* use !important to prevent issues with browser extensions that change fonts */
-        font-family: 'icomoon' !important;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        /* Better Font Rendering =========== */
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    
-    .icon-left:before {
-        content: "\e90e";
-    }
-    
-    .icon-list:before {
-        content: "\e90f";
-    }
-    
-    .icon-right:before {
-        content: "\e910";
-    }
-    
-    .icon-search:before {
-        content: "\e90a";
-    }
-    
-    .icon-like:before {
-        content: "\e90c";
-    }
-    
-    .icon-blog:before {
-        content: "\e909";
-    }
-    
-    .icon-coffee:before {
-        content: "\e90b";
-    }
-    
-    .icon-launch:before {
-        content: "\e90d";
-    }
-    
-    .icon-case:before {
-        content: "\e900";
-    }
-    
-    .icon-settings:before {
-        content: "\e901";
-    }
-    
-    .icon-layers:before {
-        content: "\e902";
-    }
-    
-    .icon-pen:before {
-        content: "\e903";
-    }
-    
-    .icon-cart:before {
-        content: "\e904";
-    }
-    
-    .icon-link:before {
-        content: "\e905";
-    }
-    
-    .icon-logo:before {
-        content: "\e906";
-    }
-    
-    .icon-lupa:before {
-        content: "\e907";
-    }
-    
-    .icon-clients:before {
-        content: "\e908";
-    }
+
     /*================reset=================================*/
     
     html,
@@ -340,3 +260,12 @@
         margin: 0 5px 5px 0;
         padding: 4px;
     }
+    #play_icon{
+        opacity: 0;
+        transform: scale(0);
+        transition: 0.3s;
+    }
+    #play_icon.visible{
+        opacity: 1;
+        transform: scale(1);
+    } 
