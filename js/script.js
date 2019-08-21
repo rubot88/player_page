@@ -3,11 +3,15 @@ document.getElementById("link").onclick = function () {
         url = document.getElementById("url").value,
         icon = document.getElementById('play_icon');
     if (!url) {
-        alert('Please set URL!');
+        alert('Please set YouTube URL!');
         return;
     }
     link.setAttribute("href", url);
-    if (link.getAttribute('href')) {
-        icon.classList.add('visible');
-    }
+    let enteredUrl = link.getAttribute('href'),
+        checkedUrl = isValidUrl(enteredUrl);
+    checkedUrl ? icon.classList.add('visible') : alert(`"${enteredUrl}" -  is not a YouTube URL. Please set valid YouTube URL!`)
 }
+
+function isValidUrl(url) {
+    return url.toLowerCase().includes('youtube');
+};
