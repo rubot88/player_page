@@ -1,19 +1,19 @@
-document.getElementById("link").onclick = function () {
-    let link = document.getElementById("play_video"),
+document.getElementById("set_url").onclick = function () {
+    let play = document.getElementById("play_video"),
         url = document.getElementById("url").value,
         icon = document.getElementById('play_icon');
     if (!url) {
         alert('Please set YouTube URL!');
         return;
     }
-    link.setAttribute("href", url);
-    let enteredUrl = link.getAttribute('href'),
+    play.setAttribute("href", url);
+    let enteredUrl = play.getAttribute('href'),
         checkedUrl = isValidUrl(enteredUrl);
     if (checkedUrl) {
-        icon.classList.add('visible')
+        play.classList.add('visible')
     } else {
         alert(`"${enteredUrl}" - is not a YouTube URL. Please set valid YouTube URL!`);
-        icon.classList.remove('visible');
+        play.classList.remove('visible');
     }
 }
 

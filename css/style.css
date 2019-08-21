@@ -246,7 +246,7 @@
         margin: 0 5px 5px 0;
     }
     
-    .set_url {
+    #set_url {
         background: aqua;
         border-radius: 5px;
         text-transform: uppercase;
@@ -260,13 +260,14 @@
         margin: 0 5px 5px 0;
         padding: 4px;
     }
-    #play_icon{
+    #play_video{
+        display: block;
         opacity: 0;
         visibility: hidden;
         transform: scale(0);
-        transition: 0.3s;
+        transition: 0.2s;
     }
-    #play_icon.visible{
+    #play_video.visible{
         visibility: visible;
         opacity: 1;
         transform: scale(1);
