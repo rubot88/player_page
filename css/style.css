@@ -248,6 +248,7 @@
     }
     
     #set_url {
+        font-weight: bold;
         background: aqua;
         border-radius: 5px;
         text-transform: uppercase;
