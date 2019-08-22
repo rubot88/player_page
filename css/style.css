@@ -250,7 +250,6 @@
     #set_url {
         font-weight: bold;
         background: rgb(0, 255, 255);
-        border-radius: 5px;
         text-transform: uppercase;
         cursor: pointer;
         padding: 10px;
