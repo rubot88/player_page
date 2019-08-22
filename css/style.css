@@ -249,18 +249,26 @@
     
     #set_url {
         font-weight: bold;
-        background: aqua;
+        background: rgb(0, 255, 255);
         border-radius: 5px;
         text-transform: uppercase;
         cursor: pointer;
         padding: 10px;
         margin: 0 5px 5px 0;
+        border-radius: 18px;
+
     }
     
     #url {
-        max-width: 300px;
+        width: 300px;
+        min-height: 50px;
         margin: 0 5px 5px 0;
         padding: 4px;
+        box-shadow: inset 1px 1px 1px 1px #3b2c27;
+        border-radius: 18px;
+    }
+    #url::placeholder{
+        text-align: center;
     }
     #play_video{
         display: block;
