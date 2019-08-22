@@ -1,12 +1,5 @@
     @import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400|Raleway:400,500,600,700,800|Roboto');
-    @font-face {
-        font-family: 'icomoon';
-        src: url('../fonts/icomoon.eot?z1ewp0');
-        src: url('../fonts/icomoon.eot?z1ewp0#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?z1ewp0') format('truetype'), url('../fonts/icomoon.woff?z1ewp0') format('woff'), url('../fonts/icomoon.svg?z1ewp0#icomoon') format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
-    
+   
 
     /*================reset=================================*/
     
@@ -256,9 +249,29 @@
         margin: 0 5px 5px 0;
         border-radius: 18px;
         color: black;
+        position: relative;
     }
+
+
     #set_url:active{
         box-shadow: inset 0px 0px 3px 0px #3b2c27;
+    }
+
+    #set_url::before{
+        content: '\f00c';
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        color: rgb(7, 255, 7);
+        position: absolute;
+        left: 110%;
+        display: inline-block;
+        vertical-align: top;
+        opacity: 0;
+        transition: 0.3s;
+    }
+    #set_url.success::before{
+        opacity: 1;
     }
     
     #url {

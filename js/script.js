@@ -1,6 +1,8 @@
-document.getElementById("set_url").onclick = function () {
+let setUrl = document.getElementById("set_url")
+setUrl.onclick = function () {
     let play = document.getElementById("play_video"),
-        url = document.getElementById("url").value;
+        urlObj = document.getElementById("url");
+        url = urlObj.value;
     if (!url) {
         alert('Please set URL!');
         return;
@@ -9,10 +11,14 @@ document.getElementById("set_url").onclick = function () {
     let enteredUrl = play.getAttribute('href'),
         checkedUrl = isValidUrl(enteredUrl);
     if (checkedUrl) {
-        play.classList.add('visible')
+        play.classList.add('visible');
+        setUrl.classList.add('success');
+        urlObj.value = '';
     } else {
         alert(`"${enteredUrl}" - is not valid URL. Please set valid URL!`);
         play.classList.remove('visible');
+        setUrl.classList.remove('success');
+
     }
 }
 
