@@ -256,7 +256,10 @@
         padding: 10px;
         margin: 0 5px 5px 0;
         border-radius: 18px;
-
+        color: black;
+    }
+    #set_url:active{
+        box-shadow: inset 0px 0px 3px 0px #3b2c27;
     }
     
     #url {
@@ -267,6 +270,7 @@
         box-shadow: inset 1px 1px 1px 1px #3b2c27;
         border-radius: 18px;
     }
+    
     #url::placeholder{
         text-align: center;
     }
