@@ -1,4 +1,4 @@
-const setUrl = document.getElementById("set_url");
+const setUrl = document.querySelector("#set_url");
 setUrl.addEventListener('click', setUrlHandler);
 
 function setUrlHandler() {
