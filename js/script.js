@@ -1,14 +1,16 @@
-let setUrl = document.getElementById("set_url")
-setUrl.onclick = function () {
-    let play = document.getElementById("play_video"),
+const setUrl = document.getElementById("set_url");
+setUrl.addEventListener('click', setUrlHandler);
+
+function setUrlHandler() {
+    const play = document.getElementById("play_video"),
         urlObj = document.getElementById("url");
-        url = urlObj.value;
+    url = urlObj.value;
     if (!url) {
         alert('Please set URL!');
         return;
     }
     play.setAttribute("href", url);
-    let enteredUrl = play.getAttribute('href'),
+    const enteredUrl = play.getAttribute('href'),
         checkedUrl = isValidUrl(enteredUrl);
     if (checkedUrl) {
         play.classList.add('visible');
@@ -25,4 +27,3 @@ setUrl.onclick = function () {
 function isValidUrl(url) {
     return url.toLowerCase().includes('youtube');
 };
-
