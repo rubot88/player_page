@@ -1,7 +1,8 @@
 const setUrl = document.querySelector("#set_url");
 setUrl.addEventListener('click', setUrlHandler);
 
-function setUrlHandler() {
+function setUrlHandler(e) {
+    e.preventDefault();
     const play = document.getElementById("play_video"),
         urlObj = document.getElementById("url");
     url = urlObj.value;
