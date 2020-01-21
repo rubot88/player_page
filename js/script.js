@@ -1,9 +1,9 @@
 const setUrlForm = document.querySelector("#set_url_form"),
 
     play = document.getElementById("play_video"),
-    urlObj = document.getElementById("url"),
-    localUrl = localStorage.getItem('url');
-sessionUrl = sessionStorage.getItem('url');
+    urlInput = document.getElementById("url"),
+    localUrl = localStorage.getItem('url'),
+    sessionUrl = sessionStorage.getItem('url');
 
 if (sessionUrl) {
     play.href = localUrl;
@@ -18,7 +18,7 @@ setUrlForm.addEventListener('submit', setUrlHandler);
 
 function setUrlHandler(e) {
     e.preventDefault();
-    url = urlObj.value;
+    url = urlInput.value;
     if (!url) {
         alert('Please set URL!');
         return;
@@ -28,7 +28,7 @@ function setUrlHandler(e) {
         checkedUrl = isValidUrl(enteredUrl);
     if (checkedUrl) {
         makeVisible(play);
-        urlObj.value = '';
+        urlInput.value = '';
         localStorage.setItem('url', url);
         sessionStorage.setItem('url', url);
         play.click();
