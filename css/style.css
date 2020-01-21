@@ -240,38 +240,6 @@
         margin: 0 5px 5px 0;
     }
     
-    #set_url {
-        font-weight: bold;
-        text-transform: uppercase;
-        cursor: pointer;
-        padding: 10px;
-        margin: 0 5px 5px 0;
-        border-radius: 18px;
-        color: #fff;
-        position: relative;
-    }
-
-
-    #set_url:active{
-        box-shadow: inset 0px 0px 3px 0px #3b2c27;
-    }
-
-    #set_url::before{
-        content: '\f00c';
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        color: rgb(7, 255, 7);
-        position: absolute;
-        left: 110%;
-        display: inline-block;
-        vertical-align: top;
-        opacity: 0;
-        transition: 0.3s;
-    }
-    #set_url.success::before{
-        opacity: 1;
-    }
     
     #url {
         width: 300px;

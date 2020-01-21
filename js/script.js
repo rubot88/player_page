@@ -28,8 +28,7 @@ function setUrlHandler(e) {
         checkedUrl = isValidUrl(enteredUrl);
     if (checkedUrl) {
         makeVisible(play);
-        setUrlForm.classList.add('success');
-        urlObj.value = ''
+        urlObj.value = '';
         localStorage.setItem('url', url);
         sessionStorage.setItem('url', url);
         play.click();
