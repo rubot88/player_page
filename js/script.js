@@ -1,4 +1,5 @@
-const setUrl = document.querySelector("#set_url"),
+const setUrlForm = document.querySelector("#set_url_form"),
+
     play = document.getElementById("play_video"),
     urlObj = document.getElementById("url"),
     localUrl = localStorage.getItem('url');
@@ -13,8 +14,7 @@ if (sessionUrl) {
     play.href = localUrl;
     makeVisible(play);
 }
-
-setUrl.addEventListener('click', setUrlHandler);
+setUrlForm.addEventListener('submit', setUrlHandler);
 
 function setUrlHandler(e) {
     e.preventDefault();
@@ -28,14 +28,15 @@ function setUrlHandler(e) {
         checkedUrl = isValidUrl(enteredUrl);
     if (checkedUrl) {
         makeVisible(play);
-        setUrl.classList.add('success');
+        setUrlForm.classList.add('success');
         urlObj.value = ''
         localStorage.setItem('url', url);
         sessionStorage.setItem('url', url);
+        play.click();
     } else {
         alert(`"${enteredUrl}" - is not valid URL. Please set valid URL!`);
         play.classList.remove('visible');
-        setUrl.classList.remove('success');
+        setUrlForm.classList.remove('success');
     }
 }
 

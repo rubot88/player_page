@@ -286,7 +286,7 @@
         text-align: center;
     }
     #play_video{
-        display: block;
+        display: inline-block;
         opacity: 0;
         visibility: hidden;
         transform: scale(0);
